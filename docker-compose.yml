@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  ui:
+    image: 'mtdbank-ui:latest'
+    build:
+      context: ./mtdbank-ui
+    container_name: mtdbank-ui
+    depends_on:
+      - mtdbank-api
+    environment: 
+      - _URL=mtdbank-api
+    ports:
+      - "80:3000"
+
+  api:
+    image: 'mtdbank-api:latest'
+    build:
+      context: ./mtdbank-api
+    container_name: mtdbank-api
+    depends_on:
+      - db
+    environment:     
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/mtdbank?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - "8080:8080"
+          
+  db:
+    image: 'mysql'
+    container_name: mtdbank-db
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=admin
+      - MYSQL_DB=mtdbank
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db-data:/var/lib/mysql
+
+volumes:
+    db-data:
