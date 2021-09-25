@@ -8,4 +8,4 @@ RUN mvn clean package -DskipTests
 FROM adoptopenjdk:11-jre-hotspot
 COPY --from=build /workspace/target/*.jar mtdbank-api.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","mtdbank-api.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=prod","-jar","mtdbank-api.jar"]
