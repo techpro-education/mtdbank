@@ -1,6 +1,8 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:8080";
-
+const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8080"
+    : "http://http://184.73.85.62:8080";
 function getToken() {
   let auth = localStorage.getItem("auth");
   if (auth) {
