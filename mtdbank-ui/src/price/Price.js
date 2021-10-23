@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Price.css";
-
-function Price() {
+const Price = () => {
   return (
-    <div id="package" className="pricing-area">
+    <div id="package" className="pricing_area">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-8 text-center">
+          <div className="col-8 text-center">
             <div className="section-title">
               <h6 className="subtitle subtitle-thumb">Our Packages</h6>
-              <h2 className="title">Grab Our Package</h2>
+              <h2 className="title">Grab Our Packages</h2>
               <p>
                 The right banking package for you . Get the privilege of
                 choosing between our many Banking Packages, and enjoy services
@@ -20,7 +19,7 @@ function Price() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-md-6">
+          <div className="col-4">
             <div className="single-price text-center">
               <div className="pricing-details">
                 <h2 className="pricing-cost">5.50%</h2>
@@ -28,27 +27,17 @@ function Price() {
                 <h4 className="pricing-title">Basic</h4>
               </div>
               <ul className="pricing-list">
+                <li>Minimum Deposit $1000</li>
+                <li>Maximum Deposit $10000 per day</li>
+                <li>Add upto 5 Users</li>
+                <li>Free Internet Banking</li>
                 <li>
-                  <Link to={"/services"}>Minumum Deposit $1000</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Maximum Deposit $10000</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Add upto 5 Users</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Free Internet Banking</Link>
-                </li>
-                <li>
-                  <Link className="btn btn-blue" to={"/services"}>
-                    Buy Now
-                  </Link>
+                  <Link className="btn btn-blue">Buy Now</Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6">
+          <div className="col-4">
             <div className="single-price text-center">
               <div className="pricing-details">
                 <h2 className="pricing-cost">7.50%</h2>
@@ -56,27 +45,17 @@ function Price() {
                 <h4 className="pricing-title">Premium</h4>
               </div>
               <ul className="pricing-list">
+                <li>Minimum Deposit $500</li>
+                <li>Maximum Deposit $50000 per day</li>
+                <li>Add upto 10 Users</li>
+                <li>Free Internet Banking</li>
                 <li>
-                  <Link to={"/services"}>Minimum Deposit $500</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Maximum Deposit $20000</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Add upto 10 Users</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Free Internet Banking</Link>
-                </li>
-                <li>
-                  <Link className="btn btn-blue " to={"/services"}>
-                    Buy Now
-                  </Link>
+                  <Link className="btn btn-blue">Buy Now</Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6">
+          <div className="col-4">
             <div className="single-price text-center">
               <div className="pricing-details">
                 <h2 className="pricing-cost">9.50%</h2>
@@ -84,22 +63,12 @@ function Price() {
                 <h4 className="pricing-title">Advanced Plan</h4>
               </div>
               <ul className="pricing-list">
+                <li>No Minimum Deposit</li>
+                <li>Maximum Deposit $100000 per day</li>
+                <li>Unlimted Users</li>
+                <li>Free Internet & Mobile Banking</li>
                 <li>
-                  <Link to={"/services"}>Minimum Deposit $0</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Maximum Deposit $50000</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Add upto 20 Users</Link>
-                </li>
-                <li>
-                  <Link to={"/services"}>Free Internet Banking</Link>
-                </li>
-                <li>
-                  <Link className="btn btn-blue " to={"/services"}>
-                    Buy Now
-                  </Link>
+                  <Link className="btn btn-blue">Buy Now</Link>
                 </li>
               </ul>
             </div>
@@ -108,6 +77,6 @@ function Price() {
       </div>
     </div>
   );
-}
+};
 
 export default Price;

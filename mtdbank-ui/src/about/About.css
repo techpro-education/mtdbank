@@ -7,8 +7,21 @@
 .about-us-area .about-us-details .section-title {
   margin-bottom: 0;
 }
+.about-us-area .about-us-details .section-title .subtitle {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: teal;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
 .about-us-area .about-us-details .section-title .title {
   margin-bottom: 21px;
+  font-weight: 600;
+  font-size: 40px;
+  font-family: var(--body-font);
+  color: #292929;
 }
 .about-us-area .about-us-details .section-title p {
   color: #5a6471;
